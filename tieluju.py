@@ -13,7 +13,10 @@ if __name__ == '__main__':
 
     b = BeautifulSoup(s.content,'lxml')
     #使用id定位到secTable
-    results = b.select('#secTable > tbody > tr > td')
+    names = b.select('#secTable > tbody > tr > td')
+    sub_urls = b.select("#mainTable td.submenu_bg > a")
 
-    for result in results:
-        print result.text
+    for i in range(0,len(names)):
+        sub_url1 = sub_urls[i * 2]["href"]
+        sub_url2 = sub_urls[i * 2 + 1]["href"]
+        print names[i].text,sub_url1,sub_url2
