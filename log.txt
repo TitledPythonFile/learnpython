@@ -1,0 +1,28 @@
+mysql> use '12306-train'
+Database changed
+mysql> drop table if exists 'angencys';
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''angencys'' at line 1
+mysql> drop table if exists 'agencys';;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''agencys'' at line 1
+ERROR: 
+No query specified
+
+mysql> drop table if exists 'agencys';
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''agencys'' at line 1
+mysql> drop table if exists `agencys`;
+Query OK, 0 rows affected, 1 warning (0.06 sec)
+
+mysql> create table `agencys` (    `id` int primary key auto_increment,    `province` varchar(10) not null,    `city` varchar(15) not null,    `county` varchar(15) not null,    `address` varchar(50) not null,    `name` varchar(50) not null,    `windows` int,    `start` time,    `end` time) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+Query OK, 0 rows affected (0.64 sec)
+
+mysql> SELECT * FROM agencys
+    -> SELECT * FROM agencys;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'SELECT * FROM agencys' at line 2
+mysql> SELECT * FROM agencys;
+Empty set (0.03 sec)
+
+mysql> exut
+    -> exit;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'exut
+exit' at line 1
+mysql> exit;

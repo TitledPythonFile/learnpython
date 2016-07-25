@@ -12,7 +12,7 @@ if __name__ == '__main__':
     try:
         with conn.cursor() as cursor:
             sql = "INSERT IGNORE INTO `example` VALUES (%s, %s, %s)"
-            cursor.execute(sql, (u"G1001", u"武汉", u"深圳")) 
+            cursor.execute(sql, (u"G1001", u"武汉", u"深圳"))
 
         conn.commit()
 
